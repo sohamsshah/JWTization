@@ -13,7 +13,7 @@ mongoose.connect(config.db,
 mongoose.Promise = global.Promise;
 require('./config/passport')(passport);
 
-// Middleware
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -21,8 +21,12 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static("public"));
+app.set('view engine', 'ejs');
 
-require('./routes/routes')(app,passport);
+
+require('./routes/routes_2')(app,passport); 
+// Write require('./routes/routes')(app,passport); for Postman-based Application
 app.listen(port, function(){
     console.log("Server is running on port 3000");
 });

@@ -13,12 +13,13 @@ let mailTransporter = nodemailer.createTransport({
     } 
 }); 
 module.exports = {
-mailing: function(props, msg){  
+mailing: function(receipent, msg){  
 let mailDetails = { 
     from: 'sohamshah.ict18@gmail.com', 
-    to: props, 
-    subject: 'Test mail', 
-    text: msg,
+    to: receipent, 
+    subject: 'IMPORTANT - Verification Link for Web 51 !', 
+    
+    html: "Click on the Link below to verify your account. <br/><span>" + msg + "</span></a>", // html body
 }; 
  
 mailTransporter.sendMail(mailDetails, function(err, data) { 
