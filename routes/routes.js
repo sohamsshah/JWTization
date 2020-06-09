@@ -1,7 +1,7 @@
 /* This ROUTE file (routes.js) is for authenticating with the JWT token. The Registered User when attempts to Login, a JWT token is generated.
 When the user tries to access the '/profile' Route, the access is denied. 
 Access is provided only after JWT Token is passed as Authorization Header with the acccess route link. After that the user is Authorized to
-access the content. 
+access the content. This can be tested using POSTMAN or similar software.
    
 */
 
