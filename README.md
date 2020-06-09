@@ -1,7 +1,8 @@
 # JWTization
-JWTization is a web service developed that enables the authorization of the Users by making use of JWT Tokens. This includes actions
+JWTization is a web service developed that enables the authentication of the Users by making use of JWT Tokens. This includes actions
 such as Register, Login, View profile and Log Out.
 
+---
 ---
 
 ## Introduction
@@ -27,19 +28,22 @@ Another variant of the Project focusses solely on the Authentication process rat
 > Nodemailer is a module for Node.js applications to ease the email sending processes. It is secure, Unicode support, multiple receipents capabilities etc. makes it more robust.
 
 ---
+---
 
 ## FEATURES:
 
 * Simple yet beautiful UI design 
-
 * Database enabled
 * Register new User
+* Password Encyrption
 * Login Activity Authentication
 * Email Verification Link to the user
 * Access to the route only after authentication of token 
 * Authenticated only after JWT token is verified
 * Profile Page
 * Logout 
+---
+---
 
 ## Technologies used:
 
@@ -50,9 +54,89 @@ Another variant of the Project focusses solely on the Authentication process rat
 * Middleware: Passport.js
 * Authentication Strategy : Passport-jwt
 * Frontend : HTML, CSS, EJS
+* Password Encyrption : BcryptJS
 * Mailing Service: Nodemailer
 * Database GUI : Robo3T
 * API testing Tool: POSTMAN
+
+---
+---
+
+## Demonstration:
+
+
+### (A) *Authentication Service (tested using POSTMAN)*  
+
+#### 1. Signup Route
+---
+![Image-1](https://github.com/sohamsshah/JWTization/blob/master/Images/Postman_Images/signup.PNG "Signup Route")
+
+#### 2. Login Route
+
+---
+
+![Image-2](https://github.com/sohamsshah/JWTization/blob/master/Images/Postman_Images/login.PNG "Login Route")
+
+#### 3. Generated Token      
+
+---
+
+![Image-3](https://github.com/sohamsshah/JWTization/blob/master/Images/Postman_Images/generated_token.PNG "Generated Token")
+
+#### 4. Authenticated Access
+
+---
+
+![Image-4](https://github.com/sohamsshah/JWTization/blob/master/Images/Postman_Images/authenticated_access.PNG "authenticated_access")
+
+---
+---
+
+### (B) *Web 51 Website*  
+
+#### 1. Home Page
+---
+![Image-1](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/home.PNG "Home Page")
+
+#### 2. Register Page
+
+---
+
+![Image-2](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/register_page.PNG "Register Page")
+
+#### 3. Login Page      
+
+---
+
+![Image-3](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/login_page.PNG "Login Page")
+
+#### 4. Verification Link on Email
+
+---
+
+![Image-4](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/email_ss.PNG "Email SS")
+
+#### 5. Profile Page
+
+---
+
+![Image-5](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/profile_page.PNG "Profile Page")
+
+#### 6. Email sent Page
+
+---
+
+![Image-4](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/email_verification_success_page.PNG "Email Sent Page")
+
+#### 7. Failure Page
+
+---
+
+![Image-4](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/failure_page.PNG  "Failure Page")
+
+
+
+
 
 
 
