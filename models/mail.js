@@ -1,10 +1,9 @@
+//Nodemailer.js EMAIL Sending Service
+
 "use strict";
 const nodemailer = require("nodemailer");
-
 require('dotenv').config();
 
-  
-  
 let mailTransporter = nodemailer.createTransport({ 
     service: 'gmail', 
     auth: { 
@@ -15,16 +14,16 @@ let mailTransporter = nodemailer.createTransport({
 module.exports = {
 mailing: function(receipent, msg){  
 let mailDetails = { 
-    from: 'sohamshah.ict18@gmail.com', 
+    from: 'sender-account-email-here', 
     to: receipent, 
     subject: 'IMPORTANT - Verification Link for Web 51 !', 
     
-    html: "Click on the Link below to verify your account. <br/><span>" + msg + "</span></a>", // html body
+    html: "Copy the Link below in your browser to verify your account. <br/> <span>" + msg + "</span>", // html body
 }; 
  
 mailTransporter.sendMail(mailDetails, function(err, data) { 
     if(err) { 
-        console.log('Error Occurs'); 
+        console.log('Error Occured'); 
     } else { 
         console.log('Email sent successfully'); 
     } 
