@@ -62,6 +62,33 @@ Another variant of the Project focusses solely on the Authentication process rat
 ---
 ---
 
+## USAGE:
+
+### Clone this Repository using:
+`git clone https://github.com/sohamsshah/JWTization`
+
+### Install Dependancies:
+
+> Node.js, NPM and MongoDB must have been installed to your local system.
+In the terminal, go to the Project directory and run command:
+
+`npm install` 
+
+### Setting up LOCAL MONGO-DB Server:
+
+> Set up the MongDB server and CLI by running th following commands in the terminal:
+
+* For MongoDB Local Server set up:
+  `mongod`
+
+* For MongoDB CLI set up:
+  `mongo`
+
+### To Run Server:
+ 
+ `nodemon server.js`
+
+
 ## DEMONSTRATION:
 
 
