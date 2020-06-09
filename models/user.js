@@ -1,7 +1,7 @@
+// User Data Storing in Database using Mongoose. Password Hashing Using BcryptJS
 var mongoose = require("mongoose");
 var config = require("../config/database");
 var bcrypt = require('bcryptjs');
-
 
 var userSchema = mongoose.Schema({
     email: {
@@ -25,7 +25,6 @@ module.exports.getUserById = function(id, cb){
 module.exports.getUserByEmail = function(email, cb){
     User.findOne({email: email}, cb);
 }
-
 
 module.exports.createUser = function(newUser, cb){
     bcrypt.genSalt(10, function(err, salt){
