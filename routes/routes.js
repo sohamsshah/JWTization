@@ -1,3 +1,10 @@
+/* This ROUTE file (routes.js) is for authenticating with the JWT token. The Registered User when attempts to Login, a JWT token is generated.
+When the user tries to access the '/profile' Route, the access is denied. 
+Access is provided only after JWT Token is passed as Authorization Header with the acccess route link. After that the user is Authorized to
+access the content. 
+   
+*/
+
 var passport = require("passport");
 var jwt = require('jsonwebtoken');
 var User = require("../models/user");
@@ -5,6 +12,9 @@ var config = require("../config/database");
 
 
 module.exports = function(app, passport){
+    
+    //Routes
+    
     app.get('/', function(req, res){
         res.json('Welcome to my Node.js');
     });
