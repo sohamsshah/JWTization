@@ -1,3 +1,5 @@
+//PASSPORT JWT Strategy
+
 var JwtStrategy = require('passport-jwt').Strategy,
 ExtractJwt = require('passport-jwt').ExtractJwt;
 
@@ -6,7 +8,13 @@ var config = require("../config/database");
 module.exports = function(passport){
 
     var opts = {}
-opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken(); //fromHeader(header_name) can be used for "Email Verification Authentication"
+/* Other options for ExtractJwt: 
+   Can be also be done using: fromUrlQueryParameter(param_name) 
+                              fromAuthHeaderWithScheme(auth_scheme)
+                              fromExtractors([array of extractor functions])
+                              fromHeader(header_name)
+*/
 opts.secretOrKey = config.secret;
 
 passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
@@ -19,7 +27,7 @@ passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
             return done(null, val);
         } else {
             return done(null, false);
-            // or you could create a new account
+            
         }
     });
 }));
