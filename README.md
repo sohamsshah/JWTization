@@ -1,6 +1,6 @@
 # JWTization
-JWTization is a web service developed that enables the authentication of the Users by making use of JWT Tokens. This includes actions
-such as Register, Login, View profile and Log Out.
+JWTization is a web service that enables the authentication of the Users by making use of JWT Tokens. This includes actions
+such as Register, Login, View profile and Log Out. It is a simple Node.js Authentication-based Project.
 
 ---
 ---
