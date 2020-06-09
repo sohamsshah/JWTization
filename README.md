@@ -7,7 +7,7 @@ such as Register, Login, View profile and Log Out.
 
 ## INTRODUCTION
 
-A simple frontend website a setup for ease of understanding using EJS. It is 'Web 51'. A user has to first register and then when the User enters correct LOGIN Credentials, a verification link (with JWT token embedded) is sent to the User. When User clicks on the Link, then he is authenticated and can access the personal/secret content.
+A simple frontend website a setup for ease of understanding using EJS. The website is named as -> 'Web 51'. A user has to first register and then when the User enters correct LOGIN Credentials, a verification link (with JWT token embedded) is sent to the User. When User clicks on the Link, then he is authenticated and can access the personal/secret content.
 
 Another variant of the Project focusses solely on the Authentication process rather than UI. When the data is sent to the "register" route, the User is registered into the Database. Afterwards, when user Logins with correct Credentials, a JWT token is generated. If the User tries to access the profile route without the token, access is denied. With JWT token passed in the Authorization Header, the User now can access the profile content. This can be tested using API testing tool such as POSTMAN.
 
@@ -169,13 +169,15 @@ In the terminal, go to the Project directory and run command:
 * [Passport](http://www.passportjs.org/)
 * [NPM JS](https://www.npmjs.com/)
 * [Nodemailer](https://nodemailer.com/)
+* [London App Brewery](https://www.appbrewery.co/)
+* [Traversy Media](https://www.traversymedia.com/)
 
 ---
 ---
 
 ## CONTRIBUTERS 💻:
 
-* [Soham Shah](https://github.com/sohamsshah/)
+* [Soham Shah](https://github.com/sohamsshah/) (webFlayer 🎃)
 
 ---
 ---
