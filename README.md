@@ -69,14 +69,14 @@ Another variant of the Project focusses solely on the Authentication process rat
 
 ### Install Dependancies:
 
-> Node.js, NPM and MongoDB must have been installed to your local system.
+Node.js, NPM and MongoDB must have been installed to your local system.
 In the terminal, go to the Project directory and run command:
 
 `npm install` 
 
 ### Setting up LOCAL MONGO-DB Server:
 
-> Set up the MongDB server and CLI by running th following commands in the terminal:
+Set up the MongDB server and CLI by running th following commands in the terminal:
 
 * For MongoDB Local Server set up:
   `mongod`
@@ -84,10 +84,24 @@ In the terminal, go to the Project directory and run command:
 * For MongoDB CLI set up:
   `mongo`
 
+### To choose which variant to RUN:
+As discussed, this project is in two variants. (A) Authentication Service (tested with POSTMAN) and (B) Web 51 Website
+<br/>
+<b> (A) In order to use raw Authentitcation Service (tested with POSTMAN) </b>,
+Write the code in server.js file as -> `require('./routes/routes')(app,passport);` <br/> 
+Comment out the complementary code. (Also explained the same in the server.js file in this repository) 
+In routes.js file, the routes of this project are defined. Other middleware authentication, user database, etc. are unchanged, so no other codes are modified.
+<br/>
+<b> (B) In order to avail the Web 51 Website Email-Verification Service </b>,
+Write the code in the server.js file -> `require('./routes/routes_2')(app,passport);` <br/>
+In routes_2.js file, the routes relating to the Email Verification Service + Authentication are defined along with the mailing service.
+Other middleware authentication, user database, etc. are unchanged, so no other codes are modified.
+
+
 ### To Run Server:
  
  `nodemon server.js`
-
+ 
 
 ## DEMONSTRATION:
 
