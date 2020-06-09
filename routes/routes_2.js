@@ -1,12 +1,21 @@
+/* This ROUTE file (routes_2.js) is for authenticating Login-in for user using "Verification LINK" that has JWT token in it.
+   The link is sent to the registered USER when the user makes a Login-attempt which is in format - "http://localhost:3000//verify/{JWT-Token}"
+   From that link by making use of Simple Express Routing, token is extracted and verified with generated token. Minimum redirects are used 
+   in order to decrease complexity, but more can be added as per requirement of the application.
+*/
+
 var passport = require("passport");
 var jwt = require('jsonwebtoken');
 var User = require("../models/user");
 var config = require("../config/database");
 var mailing = require("../models/mail");
 
-var auth_token;
+var auth_token; //Variable that stores the generated AUTH Token
 
 module.exports = function(app, passport){
+    
+    // Routes
+    
     app.get('/', function(req, res){
         res.render("home");
     });
@@ -62,14 +71,14 @@ module.exports = function(app, passport){
     });
     app.get('/verify/:token', function(req,res){
         if(req.params.token === auth_token){
-            res.render("secrets");
+            res.render("secrets"); // Can redirect to a seperate page instead also
         }
         else{
             res.render("failure");
         }
     });
 
-    
+    //For Authenticating using Headers sent with request URL 
     app.get('/profile', passport.authenticate('jwt', {session: false}), function(req, res, next){
        
         res.json({message: 'Welcome here.It is protected area and you cant enter here without JWT TOKEN.'});
