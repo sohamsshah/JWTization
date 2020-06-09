@@ -5,7 +5,7 @@ such as Register, Login, View profile and Log Out.
 ---
 ---
 
-## Introduction
+## INTRODUCTION
 
 A simple frontend website a setup for ease of understanding using EJS. It is 'Web 51'. A user has to first register and then when the User enters correct LOGIN Credentials, a verification link (with JWT token embedded) is sent to the User. When User clicks on the Link, then he is authenticated and can access the personal/secret content.
 
@@ -45,24 +45,24 @@ Another variant of the Project focusses solely on the Authentication process rat
 ---
 ---
 
-## Technologies used:
+## TECHNOLOGIES USED:
 
-* Runtime Environment: Node.js  
-* Back-end Framework: Express 
-* Database: MongoDB
-* Database ODM : Mongoose
-* Middleware: Passport.js
-* Authentication Strategy : Passport-jwt
-* Frontend : HTML, CSS, EJS
-* Password Encyrption : BcryptJS
-* Mailing Service: Nodemailer
-* Database GUI : Robo3T
-* API testing Tool: POSTMAN
+* Runtime Environment: *Node.js*  
+* Back-end Framework: *Express* 
+* Database: *MongoDB*
+* Database ODM : *Mongoose*
+* Middleware: *Passport.js*
+* Authentication Strategy : *Passport-jwt*
+* Frontend : *HTML, CSS, EJS*
+* Password Encyrption : *BcryptJS*
+* Mailing Service: *Nodemailer*
+* Database GUI : *Robo3T*
+* API testing Tool: *POSTMAN*
 
 ---
 ---
 
-## Demonstration:
+## DEMONSTRATION:
 
 
 ### (A) *Authentication Service (tested using POSTMAN)*  
@@ -133,6 +133,27 @@ Another variant of the Project focusses solely on the Authentication process rat
 ---
 
 ![Image-4](https://github.com/sohamsshah/JWTization/blob/master/Images/UI_images/failure_page.PNG  "Failure Page")
+
+---
+---
+
+## RESOURCES:
+
+* [Passport](http://www.passportjs.org/)
+* [NPM JS](https://www.npmjs.com/)
+* [Nodemailer](https://nodemailer.com/)
+
+---
+---
+
+## CONTRIBUTERS 💻:
+
+* [Soham Shah](https://github.com/sohamsshah/)
+
+---
+---
+
+                           
 
 
 
