@@ -102,6 +102,18 @@ Other middleware authentication, user database, etc. are unchanged, so no other 
  
  `nodemon server.js`
  
+### Nodemailer
+
+In this "Gmail" is used as service. By default, the less secure apps/services are disallowed. Allow them by by clicking on this [link](https://myaccount.google.com/lesssecureapps)
+
+### Setting Up .env
+In .env file, there are 3 fields:
+GMAIL_ID : "your-gmail-id-here"
+GMAIL_PWD: "your-password-here"
+SECRET: "enter-any-long-string-for-encryption"
+
+![Image](https://github.com/sohamsshah/JWTization/blob/master/Images/dot_env.PNG  ".env")
+
 
 ## DEMONSTRATION:
 
