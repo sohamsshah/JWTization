@@ -30,7 +30,7 @@ module.exports = function(app, passport){
         });
         User.createUser(newUser, function(err, user){
             if(err){
-                res.json({success: false, message: 'user is not registered'});
+                res.render("failure");
             }
             else{
                 res.redirect('/login');
